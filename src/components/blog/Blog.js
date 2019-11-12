@@ -20,6 +20,7 @@ import Markdown from './Markdown';
 import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
+import mainImage from '../../resources/auli-camps.jpg'
 
 function Copyright() {
   return (
@@ -54,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(https://source.unsplash.com/user/erondu)',
+    backgroundImage: mainImage,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -120,14 +121,21 @@ const sections = [
 
 const featuredPosts = [
   {
-    title: 'Featured post',
-    date: 'Nov 12',
+    title: 'Skiing Course',
+    date: 'Starts 1st Jan 2020 onwards',
+    image: mainImage,
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
   },
   {
-    title: 'Post title',
-    date: 'Nov 11',
+    title: 'Snow Boarding Course',
+    date: 'Starts 1st Jan 2020 onwards',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  },
+  {
+    title: 'Snow Winter Trek',
+    date: 'Starts 1st Jan 2020 onwards',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
   },
@@ -159,7 +167,7 @@ export default function Blog() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Toolbar className={classes.toolbar}>
+        {/* <Toolbar className={classes.toolbar}>
           <Button size="small">Subscribe</Button>
           <Typography
             component="h2"
@@ -191,11 +199,9 @@ export default function Blog() {
               {section}
             </Link>
           ))}
-        </Toolbar>
+        </Toolbar> */}
         <main>
-          {/* Main featured post */}
           <Paper className={classes.mainFeaturedPost}>
-            {/* Increase the priority of the hero background image */}
             {
               <img
                 style={{ display: 'none' }}
@@ -208,11 +214,10 @@ export default function Blog() {
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
                   <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                    Title of a longer featured blog post
+                    Welcome to Auli Skiing School.
                   </Typography>
                   <Typography variant="h5" color="inherit" paragraph>
-                    Multiple lines of text that form the lede, informing new readers quickly and
-                    efficiently about what&apos;s most interesting in this post&apos;s contents.
+                    India's first and largest Snow Sports Community.
                   </Typography>
                   <Link variant="subtitle1" href="#">
                     Continue reading…
@@ -247,7 +252,7 @@ export default function Blog() {
                     <Hidden xsDown>
                       <CardMedia
                         className={classes.cardMedia}
-                        image="https://source.unsplash.com/random"
+                        image={post.image}
                         title="Image title"
                       />
                     </Hidden>

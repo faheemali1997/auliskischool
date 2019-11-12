@@ -67,14 +67,14 @@ export default function Album() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="relative">
+      {/* <AppBar position="relative">
         <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
             Album layout
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
